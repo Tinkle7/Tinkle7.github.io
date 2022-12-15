@@ -4,16 +4,16 @@ import {
   IconButton,
   Drawer,
   DrawerBody,
-  //   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   useDisclosure,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ArrowDownIcon } from "@chakra-ui/icons";
+import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
+import { HashLink as Link } from "react-router-hash-link";
+import "./Link.css";
 
 function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,25 +37,51 @@ function Sidebar() {
             Tinkle Dash
           </DrawerHeader>
           <DrawerBody display="flex" flexDir="column" gap={2}>
-            <Link>About</Link>
-            <Link>Skills</Link>
-            <Link>Projects</Link>
-            <Link>Contacts</Link>
-            <Button
-              colorScheme="teal"
-              display="flex"
-              justifyContent="space-evenly"
-              alignItems="center"
-              gap={1}
-              w="40%"
-              margin="5% auto"
+            <Link
+              to="#about"
+              className="underline"
+              style={{ width: "fit-content" }}
             >
-              <Box bg="none">Resume</Box>
+              About
+            </Link>
+            <Link
+              to="#skills"
+              className="underline"
+              style={{ width: "fit-content" }}
+            >
+              Skills
+            </Link>
+            <Link
+              to="#projects"
+              className="underline"
+              style={{ width: "fit-content" }}
+            >
+              Projects
+            </Link>
+            <Link
+              to="#contacts"
+              className="underline"
+              style={{ width: "fit-content" }}
+            >
+              Contacts
+            </Link>
+            <a href={Resume} download w="fit-content">
+              <Button
+                colorScheme="teal"
+                display="flex"
+                justifyContent="space-evenly"
+                alignItems="center"
+                gap={1}
+                w="40%"
+                margin="5% auto"
+              >
+                <Box bg="none">Resume</Box>
 
-              <Box bg="none">
-                <ArrowDownIcon bg="none" />
-              </Box>
-            </Button>
+                <Box bg="none">
+                  <ArrowDownIcon bg="none" />
+                </Box>
+              </Button>
+            </a>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

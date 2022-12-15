@@ -1,6 +1,9 @@
 import React from "react";
-import { Box, Link, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex, Button } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
+import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
+import { HashLink as Link } from "react-router-hash-link";
+import "./Link.css";
 
 function NavbarRight() {
   return (
@@ -17,31 +20,33 @@ function NavbarRight() {
       }}
       bg="none"
     >
-      <Link color="linearGradient(90deg, #e3ffe7 0%, #d9e7ff 100%)" bg="none">
+      <Link to="#about" className="underline">
         About
       </Link>
-      <Link color="black" bg="none">
+      <Link to="#skills" className="underline">
         Skills
       </Link>
-      <Link color="black" bg="none">
+      <Link to="#projects" className="underline">
         Projects
       </Link>
-      <Link color="black" bg="none">
+      <Link to="#contacts" className="underline">
         Contacts
       </Link>
-      <Button
-        colorScheme="teal"
-        display="flex"
-        justifyContent="space-evenly"
-        alignItems="center"
-        gap={2}
-      >
-        <Box bg="none">Resume</Box>
+      <a href={Resume} download>
+        <Button
+          colorScheme="teal"
+          display="flex"
+          justifyContent="space-evenly"
+          alignItems="center"
+          gap={2}
+        >
+          <Box bg="none">Resume</Box>
 
-        <Box bg="none">
-          <ArrowDownIcon bg="none" />
-        </Box>
-      </Button>
+          <Box bg="none">
+            <ArrowDownIcon bg="none" />
+          </Box>
+        </Button>
+      </a>
     </Flex>
   );
 }

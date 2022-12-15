@@ -6,7 +6,7 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <Box borderBottom="1px solid #c0afc7" padding="5px">
+    <Box bg="#cfb53b" padding="5px" position="sticky" zIndex="4" top="0">
       <Flex
         minWidth="max-content"
         alignItems="center"

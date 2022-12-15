@@ -8,7 +8,9 @@ function Header() {
       <div class="card">
         <Box margin="auto">
           <Box>
-            <Text>Hi there</Text>
+            <Text fontSize="lg" as="cite">
+              Hi there
+            </Text>
           </Box>
           <Box bg="none" className="container">
             <Box className="row" bg="none">
@@ -18,7 +20,7 @@ function Header() {
             </Box>
           </Box>
           <Box>
-            <Text>Full-Stack Developer</Text>
+            <Text fontSize="lg">Full-Stack Developer</Text>
           </Box>
         </Box>
         <Box padding="5%" maxW="50%">

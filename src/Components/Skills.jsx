@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import "./Skills.css";
 import html from "../Icons/icons8-html-filetype-100.png";
 import css from "../Icons/icons8-css-filetype-100.png";
@@ -57,7 +57,7 @@ const Skills = () => {
   ];
 
   return (
-    <div>
+    <div id="skills">
       <Box>
         <Box padding="2%">
           <Text fontSize="2xl" textAlign="center" cursor="default">

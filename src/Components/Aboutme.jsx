@@ -1,10 +1,11 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import "./Aboutme.css";
+import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
 
 const Aboutme = () => {
   return (
-    <Box bg="#E8E5D7" marginTop="10%">
+    <Box bg="#E8E5D7" marginTop="10%" id="about">
       <Box padding="2%">
         <Text fontSize="2xl" textAlign="center" cursor="default">
           ABOUT ME
@@ -38,7 +39,9 @@ const Aboutme = () => {
               excited to make the leap and continue refining my skills with the
               right company and people.
             </Text>
-            <Button>Download Resume</Button>
+            <a href={Resume} download>
+              <Button>Download Resume</Button>
+            </a>
           </Box>
         </Box>
       </Box>

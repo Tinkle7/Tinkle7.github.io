@@ -11,11 +11,12 @@ import github from "../Icons/icons8-github-24.png";
 export const Myworks = () => {
   return (
     <Box
-      marginY="2%"
+      marginTop="2%"
       paddingY="2%"
       bg="#E8E5D7"
       textAlign="center"
       cursor="default"
+      id="projects"
     >
       <Box padding="2%">
         <Text fontSize="2xl" textAlign="center" cursor="default">
@@ -247,6 +248,25 @@ export const Myworks = () => {
             </Box>
           </Box>
         </SimpleGrid>
+      </Box>
+      <Box marginTop="5%" marginBottom="3%">
+        <Text
+          fontSize="xl"
+          fontWeight="500"
+          className="style_text2"
+          w="fit-content"
+          margin="auto"
+        >
+          MY CODING EXPERIENCE
+        </Text>
+      </Box>
+      <Box>
+        <Image
+          src="https://ghchart.rshah.org/Tinkle7"
+          alt="2016rshah's Github chart"
+          margin="auto"
+          w="80%"
+        />
       </Box>
     </Box>
   );

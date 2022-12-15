@@ -25,19 +25,10 @@
 }
 
 .image {
-  --b: 8px; /* the border thickness*/
-  --g: 8px; /* the gap */
-  --c: #e5c263; /* the color */
-
-  width: var(--s);
-  aspect-ratio: 1;
-  outline: calc(var(--s) / 2) solid #0009;
-  outline-offset: calc(var(--s) / -2);
-  cursor: default;
-  transition: 0.3s ease-in;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
 }
 
 .image:hover {
-  outline: var(--b) solid var(--c);
-  outline-offset: var(--g);
+  transform: scale(1.1);
 }
