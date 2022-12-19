@@ -41,6 +41,7 @@ function Sidebar() {
               to="#about"
               className="underline"
               style={{ width: "fit-content" }}
+              onClick={onClose}
             >
               About
             </Link>
@@ -48,6 +49,7 @@ function Sidebar() {
               to="#skills"
               className="underline"
               style={{ width: "fit-content" }}
+              onClick={onClose}
             >
               Skills
             </Link>
@@ -55,6 +57,7 @@ function Sidebar() {
               to="#projects"
               className="underline"
               style={{ width: "fit-content" }}
+              onClick={onClose}
             >
               Projects
             </Link>
@@ -62,6 +65,7 @@ function Sidebar() {
               to="#contacts"
               className="underline"
               style={{ width: "fit-content" }}
+              onClick={onClose}
             >
               Contacts
             </Link>

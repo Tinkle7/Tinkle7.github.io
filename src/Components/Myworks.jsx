@@ -28,7 +28,7 @@ export const Myworks = () => {
         <SimpleGrid
           gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
         >
-          <Box>
+          <Box className="Project_container">
             <Box padding="5%">
               <Image src={cult} />
             </Box>
@@ -82,7 +82,7 @@ export const Myworks = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box className="Project_container">
             <Box padding="5%">
               <Image src={stickey} />
             </Box>
@@ -139,7 +139,7 @@ export const Myworks = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box className="Project_container">
             <Box padding="5%">
               <Image src={lovoda} />
             </Box>
@@ -193,7 +193,7 @@ export const Myworks = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box className="Project_container">
             <Box padding="5%">
               <Image src={mail} />
             </Box>
@@ -257,8 +257,29 @@ export const Myworks = () => {
           w="fit-content"
           margin="auto"
         >
-          MY CODING EXPERIENCE
+          GIT-HUB STATUS
         </Text>
+      </Box>
+      <Box
+        display="flex"
+        justifyContent="space-evenly"
+        marginBottom={6}
+        flexDirection={{ base: "column", lg: "row" }}
+      >
+        <Box>
+          <Image
+            src="https://github-readme-stats.vercel.app/api?username=Tinkle7&theme=gruvbox"
+            alt="2016rshah's Github chart"
+            margin="auto"
+          />
+        </Box>
+        <Box>
+          <Image
+            src="https://github-readme-streak-stats.herokuapp.com/?user=Tinkle7&theme=gruvbox"
+            alt="2016rshah's Github chart"
+            margin="auto"
+          />
+        </Box>
       </Box>
       <Box>
         <Image
