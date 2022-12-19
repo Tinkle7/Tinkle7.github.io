@@ -4,7 +4,7 @@ import { Box, Text } from "@chakra-ui/react";
 
 function Header() {
   return (
-    <Box>
+    <Box id="top">
       <div class="card">
         <Box margin="auto">
           <Box>

@@ -3,6 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import NavbarRight from "./NavbarRight";
 import Sidebar from "./Sidebar";
 import "./Navbar.css";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Navbar() {
   return (
@@ -16,12 +17,12 @@ function Navbar() {
         cursor="pointer"
         bg="none"
       >
-        <Box>
+        <Link to="#top">
           <div class="wrapper">
             <div class="bg"> Tinkle </div>
             <div class="fg"> Tinkle </div>
           </div>
-        </Box>
+        </Link>
         <NavbarRight />
         <Sidebar />
       </Flex>
