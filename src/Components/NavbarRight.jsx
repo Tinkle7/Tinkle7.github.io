@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Flex, Button } from "@chakra-ui/react";
-import { ArrowDownIcon } from "@chakra-ui/icons";
-import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+// import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Link.css";
 
@@ -20,6 +20,9 @@ function NavbarRight() {
       }}
       bg="none"
     >
+      <Link to="#top" className="underline">
+        Home
+      </Link>
       <Link to="#about" className="underline">
         About
       </Link>
@@ -32,7 +35,10 @@ function NavbarRight() {
       <Link to="#contacts" className="underline">
         Contacts
       </Link>
-      <a href={Resume} download>
+      <a
+        href="https://drive.google.com/file/d/1dOu0OJaATk0CQDiEp7-M3-xNgBPfYgAy/view?usp=share_link"
+        target="_blank"
+      >
         <Button
           colorScheme="teal"
           display="flex"
@@ -43,7 +49,7 @@ function NavbarRight() {
           <Box bg="none">Resume</Box>
 
           <Box bg="none">
-            <ArrowDownIcon bg="none" />
+            <ExternalLinkIcon bg="none" />
           </Box>
         </Button>
       </a>

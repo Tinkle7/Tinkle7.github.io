@@ -11,7 +11,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ArrowDownIcon } from "@chakra-ui/icons";
-import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
+// import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Link.css";
 
@@ -37,6 +37,14 @@ function Sidebar() {
             Tinkle Dash
           </DrawerHeader>
           <DrawerBody display="flex" flexDir="column" gap={2}>
+            <Link
+              to="#top"
+              className="underline"
+              style={{ width: "fit-content" }}
+              onClick={onClose}
+            >
+              Home
+            </Link>
             <Link
               to="#about"
               className="underline"
@@ -69,7 +77,11 @@ function Sidebar() {
             >
               Contacts
             </Link>
-            <a href={Resume} download w="fit-content">
+            <a
+              href="https://drive.google.com/file/d/1dOu0OJaATk0CQDiEp7-M3-xNgBPfYgAy/view?usp=share_link"
+              target="_blank"
+              w="fit-content"
+            >
               <Button
                 colorScheme="teal"
                 display="flex"
