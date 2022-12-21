@@ -25,7 +25,10 @@ function Header() {
         </Box>
         <Box padding="5%" maxW="50%">
           <div class="avatar">
-            <img src="https://avatars.githubusercontent.com/u/98764045?v=4" />
+            <img
+              src="https://avatars.githubusercontent.com/u/98764045?v=4"
+              alt="Tinkle"
+            />
           </div>
         </Box>
         <span class="top"></span>

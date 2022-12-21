@@ -81,6 +81,7 @@ function Sidebar() {
               href="https://drive.google.com/file/d/1dOu0OJaATk0CQDiEp7-M3-xNgBPfYgAy/view?usp=share_link"
               target="_blank"
               w="fit-content"
+              rel="noreferrer"
             >
               <Button
                 colorScheme="teal"

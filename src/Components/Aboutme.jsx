@@ -1,7 +1,7 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import "./Aboutme.css";
-import Resume from "../Resumes/TINKLE_DASH_Resume.pdf";
+import { DownloadIcon } from "@chakra-ui/icons";
 
 const Aboutme = () => {
   return (
@@ -39,8 +39,19 @@ const Aboutme = () => {
               excited to make the leap and continue refining my skills with the
               right company and people.
             </Text>
-            <a href={Resume} download>
-              <Button>Download Resume</Button>
+            <a href="TINKLE_DASH_Resume.pdf" download="TINKLE_DASH_Resume.pdf">
+              <Button
+                display="flex"
+                justifyContent="space-evenly"
+                alignItems="center"
+                gap={2}
+              >
+                <Box bg="none">Resume</Box>
+
+                <Box bg="none">
+                  <DownloadIcon bg="none" />
+                </Box>
+              </Button>
             </a>
           </Box>
         </Box>

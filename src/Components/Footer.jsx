@@ -9,13 +9,45 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import swal from "sweetalert";
 import "./Skills.css";
 import github from "../Icons/icons8-github-squared-100.png";
 import linkdin from "../Icons/icons8-linkedin-100.png";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 const Footer = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_9fm09jf",
+        "template_uh82xre",
+        form.current,
+        "BNpcar9YNLC2KbHBY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          swal("Thank You", "email send successfully", "success", {
+            button: false,
+            timer: 1500,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          swal("Try again", "sending of email failed", "warning", {
+            button: false,
+            timer: 1500,
+          });
+        }
+      );
+    document.getElementById("myform").reset();
+  };
+
   return (
     <Box id="contacts">
       <Box padding="2%">
@@ -31,28 +63,36 @@ const Footer = () => {
       >
         <Box flexGrow="1" flexBasis="0">
           <Box padding="10%">
-            <FormControl>
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-              <FormLabel>Name</FormLabel>
-              <Input
-                htmlSize={20}
-                width="auto"
-                placeholder="enter your name here"
-              />
-              <FormLabel>Number</FormLabel>
-              <Input
-                htmlSize={4}
-                width="auto"
-                type="number"
-                placeholder="enter your number here"
-              />
-              <FormLabel>Message</FormLabel>
-              <Textarea placeholder="Write your message here" size="sm" />
-              <Button mt={4} colorScheme="teal" type="submit">
-                Submit
-              </Button>
-            </FormControl>
+            <form ref={form} onSubmit={sendEmail} id="myform">
+              <FormControl>
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" name="user_email" />
+                <FormLabel>Name</FormLabel>
+                <Input
+                  htmlSize={20}
+                  width="auto"
+                  placeholder="enter your name here"
+                  name="user_name"
+                />
+                <FormLabel>Number</FormLabel>
+                <Input
+                  htmlSize={4}
+                  width="auto"
+                  type="number"
+                  placeholder="enter your number here"
+                  name="user_number"
+                />
+                <FormLabel>Message</FormLabel>
+                <Textarea
+                  placeholder="How can I help you"
+                  size="sm"
+                  name="message"
+                />
+                <Button mt={4} colorScheme="teal" type="submit" value="Send">
+                  Submit
+                </Button>
+              </FormControl>
+            </form>
           </Box>
         </Box>
         <Box
